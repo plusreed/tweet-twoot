@@ -23,7 +23,7 @@ app.post(
     req, res) {
     addTweet(req['query']['tweet_content'])
 
-    res.send('Thank you for using our service !The. Twet has been sentrtt')
+    res.send('Thanku 4 using our service !The. Twet has been sentrtt')
   }
   )
 app.get('/get_tweets',
@@ -47,3 +47,4 @@ app.get('/get_tweets',
 app.
 
 listen(4000, function() { console.log('listening on port 4000 baybee') })
+// just let us have a  new line @github
