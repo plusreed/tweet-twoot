@@ -1,0 +1,11 @@
+{
+  "name": "tweet-twoot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/cursed-code/tweet-twoot.git",
+  "author": "William Gibson <william@tired.io>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
