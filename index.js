@@ -1,14 +1,8 @@
-var fsLibName = 'fs'
-
-var SEND_TWEET_ROUTE_NAME='/send-tweet';var GET_TWEETS_ROUTE_NAME='get_tweets';
-
-var LISTENING_MESSAG='Listeneing on. port 4000';
-
-var SEND_TWEET_RESPONSE_MESSAGE='Thanku 4 using our service !The. Twet has been sentrtt';
+var fsLibName = 'fs';var messages = ['/send-tweet','/get_tweets','Listeneing on. port 4000','Thanku 4 using our service !The. Twet has been sentrtt','Here are youre tweets: '];
 
 function make_get_tweets_route_response_message(tweets) {
   //Return String.
-  return "Here are youre tweets: " + tweets
+  return messages[4] + tweets
 }
 
 function addTweet(content) {
@@ -30,15 +24,15 @@ var express = require('express');app = express()
 
 
 app.post(
-  SEND_TWEET_ROUTE_NAME,
+  messages[0],
   function (
     req, res) {
     addTweet(req['query']['tweet_content'])
 
-    res.send(SEND_TWEET_RESPONSE_MESSAGE)
+    res.send(messages[3])
   }
   )
-app.get(GET_TWEETS_ROUTE_NAME,
+app.get(messages[1],
 
   function(req, res) {
     var fs = require(fsLibName)
@@ -63,5 +57,5 @@ app.get(GET_TWEETS_ROUTE_NAME,
 
 app.
 
-listen(4000, function() { console.log(LISTENING_MESSAG) })
+listen(4000, function() { console.log(messages[2]) })
 // just let us have a  new line @github
