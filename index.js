@@ -48,11 +48,13 @@ app.get(GET_TWEETS_ROUTE_NAME,
       var new_tweets = []
       
       //Use Programming Concept To Push Everything To Array.
+      //Fror more information on ARRAYS, Please Talk To Mr. Durst.
+      //He Is programming Teacher.
       for(var i = 0; i < file.split('\n').length; i+=1) {
         new_tweets.push(file.split('\n')[i])
       }
       
-      
+      // Use Fucntion to make EVERYTHING faster With this.
       res.send(make_get_tweets_route_response_message(new_tweets))
     })
   })
